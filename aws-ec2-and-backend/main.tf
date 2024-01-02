@@ -43,6 +43,7 @@ resource "aws_security_group" "ssh-access-web" {
 #   }
 # }
 
-# output "show" {
+output "public_ip" {
+  value = aws_instance.web-server.public_ip
    
-# }
+}
