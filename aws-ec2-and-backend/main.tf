@@ -65,3 +65,12 @@ output "public_ip" {
   value = aws_instance.web-server.public_ip
    
 }
+
+# resource "aws_eip" "eip" {
+#   vpc      = true
+#   instance = aws_instance.web-server.id
+#   provisioner "local-exec" {
+#     command = "echo ${aws_eip.eip.public_dns} >> /root/web-server-dns.txt"
+#   }
+
+# }
